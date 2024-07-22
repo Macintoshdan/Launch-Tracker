@@ -68,7 +68,7 @@ try:
     margin = 3
     abbrev_width, abbrev_height = black.textsize(data["abbrev"], font_20)
     abbrev_x = 250 - abbrev_width - margin
-    abbrev_y = round(104 / 2) - round(abbrev_height / 2)
+    abbrev_y = round(122 / 2) - round(abbrev_height / 2)
     abbrev_rectangle_top = abbrev_y - margin
     abbrev_rectangle_left = abbrev_x - margin
     abbrev_rectangle_bottom = abbrev_y + abbrev_height + margin
