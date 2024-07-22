@@ -39,8 +39,8 @@ try:
     ]  # ... and the name of the rocket after that
 
     # Loading fonts
-    font_12 = ImageFont.truetype("font.ttf", size=13)
-    font_20 = ImageFont.truetype("font.ttf", size=21)
+    font_12 = ImageFont.truetype("font.ttf", size=14)
+    font_20 = ImageFont.truetype("font.ttf", size=22)
 
     color_image = Image.new(
         mode="1", size=(250, 122), color=255
