@@ -39,8 +39,8 @@ try:
     ]  # ... and the name of the rocket after that
 
     # Loading fonts
-    font_12 = ImageFont.truetype("font.ttf", size=12)
-    font_20 = ImageFont.truetype("font.ttf", size=20)
+    font_12 = ImageFont.truetype("font.ttf", size=13)
+    font_20 = ImageFont.truetype("font.ttf", size=21)
 
     color_image = Image.new(
         mode="1", size=(250, 122), color=255
@@ -67,7 +67,7 @@ try:
     # Add launch status in center of screenxb
     margin = 3
     abbrev_width, abbrev_height = black.textsize(data["abbrev"], font_20)
-    abbrev_x = 212 - abbrev_width - margin
+    abbrev_x = 250 - abbrev_width - margin
     abbrev_y = round(104 / 2) - round(abbrev_height / 2)
     abbrev_rectangle_top = abbrev_y - margin
     abbrev_rectangle_left = abbrev_x - margin
@@ -88,12 +88,12 @@ try:
     # Percentage Rectangle
     height = 8  # 20
     black_width = 2  # 4
-    black_rectangle_top = 104 - (math.ceil(height / 2) - math.ceil(black_width / 2))
+    black_rectangle_top = 122 - (math.ceil(height / 2) - math.ceil(black_width / 2))
     black_rectangle_left = 0
-    black_rectangle_bottom = 104 - (
+    black_rectangle_bottom = 122 - (
         math.floor(height / 2) + math.floor(black_width / 2)
     )
-    black_rectangle_right = 212
+    black_rectangle_right = 250
     black.rectangle(
         (
             black_rectangle_left,
@@ -104,10 +104,10 @@ try:
         fill="black",
     )  # The black, thin line
 
-    color_rectangle_top = 104 - height
+    color_rectangle_top = 122 - height
     color_rectangle_left = 0
-    color_rectangle_bottom = 104
-    color_rectangle_right = round(212 * data["launch_percent"])
+    color_rectangle_bottom = 122
+    color_rectangle_right = round(250 * data["launch_percent"])
     color.rectangle(
         (
             color_rectangle_left,
