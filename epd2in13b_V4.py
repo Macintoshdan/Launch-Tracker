@@ -28,7 +28,7 @@
 #
 
 import logging
-from . import epdconfig
+from Launch-Tracker import epdconfig
 
 # Display resolution
 EPD_WIDTH       = 122
