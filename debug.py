@@ -1,4 +1,4 @@
-import epd2in13b_V4 as epd
+from Launch-Tracker import epd2in13b_V4 as epd
 from PIL import Image, ImageDraw, ImageFont
 import re, math, os
 from datetime import datetime
