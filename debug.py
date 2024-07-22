@@ -38,8 +38,9 @@ next_rocket_name = launches.parse_data(1)[
 ]  # ... and the name of the rocket after that
 
 # Loading fonts
-font_12 = ImageFont.truetype("font.ttf", size=15)
-font_20 = ImageFont.truetype("font.ttf", size=23)
+font_15 = ImageFont.truetype("font.ttf", size=15)
+font_23 = ImageFont.truetype("font.ttf", size=23)
+font_11 = ImageFont.truetype("font.ttf", size=11)
 
 color_image = Image.new(
     mode="1", size=(250, 122), color=255
@@ -51,28 +52,28 @@ black_image = Image.new(
 )  # And the one where we draw the black image
 black = ImageDraw.Draw(black_image)
 
-color.text((0, 0), data["rocket_name"], 0, font_20)  # Name of rocket
-black.text((0, 20), truncate(data["mission_name"]), 0, font_12)  # Mission name
-black.text((0, 35), data["agency"], 0, font_12)  # Agency name
+color.text((0, 0), data["rocket_name"], 0, font_23)  # Name of rocket
+black.text((0, 28), truncate(data["mission_name"]), 0, font_15)  # Mission name
+black.text((0, 43), data["agency"], 0, font_15)  # Agency name
 color.text(
-    (0, 48), "T-" + seconds_to_hms(data["countdown"]), 0, font_20
+    (0, 56), "T-" + seconds_to_hms(data["countdown"]), 0, font_23
 )  # Create countdown (T-H:M:S)
 black.text(
-    (0, 69), f"Next: {next_rocket_name}", 0, font_12
+    (0, 77), f"Next: {next_rocket_name}", 0, font_15
 )  # And here the next rocket name
 
-black.text((0, 84), f"Updated: {datetime.now().strftime('%H:%M:%S')}")
+black.text((0, 92), f"Updated: {datetime.now().strftime('%H:%M:%S')}", 0, font_11))
 
 # Add launch status in center of screenxb
 margin = 3
-abbrev_width, abbrev_height = black.textsize(data["abbrev"], font_20)
+abbrev_width, abbrev_height = black.textsize(data["abbrev"], font_23)
 abbrev_x = 250 - abbrev_width - margin
 abbrev_y = round(122 / 2) - round(abbrev_height / 2)
 abbrev_rectangle_top = abbrev_y - margin
 abbrev_rectangle_left = abbrev_x - margin
 abbrev_rectangle_bottom = abbrev_y + abbrev_height + margin
 abbrev_rectangle_right = abbrev_x + abbrev_width + margin
-color.text((abbrev_x, abbrev_y), data["abbrev"], 1, font_20, color="white")
+color.text((abbrev_x, abbrev_y), data["abbrev"], 1, font_23, color="white")
 color.rectangle(
     (
         abbrev_rectangle_left,
@@ -82,7 +83,7 @@ color.rectangle(
     ),
     fill="black",
 )
-color.text((abbrev_x, abbrev_y), data["abbrev"], 1, font_20, color="white")
+color.text((abbrev_x, abbrev_y), data["abbrev"], 1, font_23, color="white")
 
 # Percentage Rectangle
 height = 11  # 20
