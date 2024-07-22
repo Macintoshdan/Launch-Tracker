@@ -54,16 +54,16 @@ try:
     black = ImageDraw.Draw(black_image)
 
     color.text((0, 0), data["rocket_name"], 0, font_20)  # Name of rocket
-    black.text((0, 26), truncate(data["mission_name"]), 0, font_12)  # Mission name
-    black.text((0, 41), data["agency"], 0, font_12)  # Agency name
+    black.text((0, 28), truncate(data["mission_name"]), 0, font_12)  # Mission name
+    black.text((0, 43), data["agency"], 0, font_12)  # Agency name
     color.text(
-        (0, 54), "T-" + seconds_to_hms(data["countdown"]), 0, font_20
+        (0, 56), "T-" + seconds_to_hms(data["countdown"]), 0, font_20
     )  # Create countdown (T-H:M:S)
     black.text(
-        (0, 75), f"Next: {next_rocket_name}", 0, font_12
+        (0, 77), f"Next: {next_rocket_name}", 0, font_12
     )  # And here the next rocket name
 
-    black.text((0, 90), f"Updated: {datetime.now().strftime('%H:%M:%S')}", 0, font_11)
+    black.text((0, 92), f"Updated: {datetime.now().strftime('%H:%M:%S')}", 0, font_11)
 
     # Add launch status in center of screenxb
     margin = 3
