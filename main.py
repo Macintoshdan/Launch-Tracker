@@ -86,7 +86,7 @@ try:
     color.text((abbrev_x, abbrev_y), data["abbrev"], 1, font_20, color="white")
 
     # Percentage Rectangle
-    height = 10  # 20
+    height = 11  # 20
     black_width = 2  # 4
     black_rectangle_top = 122 - (math.ceil(height / 2) - math.ceil(black_width / 2))
     black_rectangle_left = 0
