@@ -41,7 +41,7 @@ try:
     # Loading fonts
     font_12 = ImageFont.truetype("font.ttf", size=15)
     font_20 = ImageFont.truetype("font.ttf", size=23)
-    font_7 = ImageFont.truetype("font.ttf", size=7)
+    font_10 = ImageFont.truetype("font.ttf", size=10)
 
     color_image = Image.new(
         mode="1", size=(250, 122), color=255
@@ -63,7 +63,7 @@ try:
         (0, 69), f"Next: {next_rocket_name}", 0, font_12
     )  # And here the next rocket name
 
-    black.text((0, 84), f"Updated: {datetime.now().strftime('%H:%M:%S')}", 0, font_7)
+    black.text((0, 84), f"Updated: {datetime.now().strftime('%H:%M:%S')}", 0, font_10)
 
     # Add launch status in center of screenxb
     margin = 3
