@@ -128,9 +128,9 @@ try:
     display = epd.EPD()
     display.init()
     display.Clear()
-    display.display(
-        display.getbuffer(image=black_image), display.getbuffer(image=color_image)
-    )
+    display.display(display.getbuffer(image=black_image), display.getbuffer(image=color_image))
+    display.sleep
+    
 
 except Exception as e:
     quit()
