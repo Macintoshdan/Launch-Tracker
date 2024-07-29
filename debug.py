@@ -62,7 +62,7 @@ black.text(
     (0, 77), f"Next: {next_rocket_name}", 0, font_15
 )  # And here the next rocket name
 
-black.text((0, 92), f"Updated: {datetime.now().strftime('%H:%M:%S')}", 0, font_11))
+black.text((0, 92), f"Updated: {datetime.now().strftime('%H:%M:%S')}", 0, font_11)
 
 # Add launch status in center of screenxb
 margin = 3
