@@ -3,7 +3,7 @@
 echo "INFORMATION: It is recommended to run this on a fresh system, as this will, for example, clear your crontabs"
 script_dir=$(realpath "$(dirname "$0")")
 
-# Ask the user for input and default to 10 if no input is given
+# Ask the user for input and default to 15 if no input is given
 read -p "How often should the script run? (15 minutes): " input
 input=${input:-15}
 
