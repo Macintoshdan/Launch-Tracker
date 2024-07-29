@@ -127,6 +127,5 @@ black_image = black_image.rotate(angle=180)
 display = epd.EPD()
 display.init()
 display.Clear()
-display.display(
-    display.getbuffer(image=black_image), display.getbuffer(image=color_image)
-)
+display.display(display.getbuffer(image=black_image), display.getbuffer(image=color_image))
+display.sleep
